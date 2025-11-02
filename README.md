@@ -32,7 +32,7 @@ Add the library to your project:
 
 ```kotlin
 dependencies {
-    implementation("com.asadullahhilgalib:compose-reorderable:1.0.0")
+    implementation("com.github.codergalib2005:compose-reorderable:<latest_version>")
 }
 ```
 
