@@ -12,9 +12,7 @@ Created by **Asadullah Hil Galib**.
 
 ## 🎬 Demo Video
 
-Watch the library in action:  
-[![Compose Reorderable Demo](https://img.youtube.com/vi/c11t-5dnAfg/0.jpg)](https://www.youtube.com/watch?v=c11t-5dnAfg)
-
+https://github.com/user-attachments/assets/de3f28af-5c92-4da9-a934-f59e0c0a1349
 ---
 
 ## 🧩 Features
