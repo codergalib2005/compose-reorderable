@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.composereorderable"
+    namespace = "com.codergalib2005.composereorderable"
     compileSdk {
         version = release(36)
     }

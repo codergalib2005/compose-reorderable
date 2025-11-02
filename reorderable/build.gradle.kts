@@ -6,14 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.reorderable"
-    compileSdk {
-        version = release(36)
-    }
+    namespace = "com.codergalib2005.reorderable"
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -27,10 +24,12 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
@@ -48,9 +47,23 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("androidx.compose.ui:ui:1.7.0") // main UI toolkit
-    implementation("androidx.compose.runtime:runtime:1.7.0") // runtime system for @Composable
-    implementation("androidx.compose.foundation:foundation:1.7.0") // layout primitives like Box, Row, etc.
-    implementation("androidx.compose.animation:animation:1.7.0") // animation utilities
+    implementation("androidx.compose.ui:ui:1.7.0")
+    implementation("androidx.compose.runtime:runtime:1.7.0")
+    implementation("androidx.compose.foundation:foundation:1.7.0")
+    implementation("androidx.compose.animation:animation:1.7.0")
     implementation("androidx.compose.ui:ui-util:1.7.0")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+
+                groupId = "com.codergalib2005" // change to your own group
+                artifactId = "reorderable"
+                version = "1.0.0"
+            }
+        }
+    }
 }
