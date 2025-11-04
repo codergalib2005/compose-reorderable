@@ -38,6 +38,17 @@ dependencies {
     implementation("com.github.codergalib2005:compose-reorderable:<latest_version>")
 }
 ```
+`settings.gradle.kts`
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://jitpack.io")  // 👈 Add this line
+    }
+}
+```
 
 
 ## ⚙️ How to Use
